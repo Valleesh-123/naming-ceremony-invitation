@@ -15,22 +15,33 @@
       border-radius: 12px;
       box-shadow: 0 6px 15px rgba(0,0,0,0.2);
     }
+    a.location-link {
+      display: inline-block;
+      margin-top: 15px;
+      font-size: 18px;
+      color: #d62828;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a.location-link:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
   <h1>✨ Naming Ceremony Invitation ✨</h1>
 
-  <!-- Display your JPEG -->
-  <img src="invitation.jpeg" alt="Invitation" usemap="#invitemap">
+  <!-- Show your JPEG -->
+  <img src="invitation.jpeg" alt="Invitation">
 
-  <!-- Image map defining clickable areas -->
-  <map name="invitemap">
-    <!-- Location link hotspot (adjust coords for your image size) -->
-    <area shape="rect" coords="150,850,400,900"
-          href="https://share.google/GyftiYsSzhd9soLQW"
+  <!-- Visible Location Link -->
+  <p>
+    📍 <a href="https://maps.google.com/?q=Sri+Jnanaganapathi+Kalabavana+Bengaluru"
           target="_blank"
-          alt="Venue Location">
-  </map>
+          class="location-link">
+      Click here for Location
+    </a>
+  </p>
 
 </body>
 </html>
