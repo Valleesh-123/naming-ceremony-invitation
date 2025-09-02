@@ -10,21 +10,32 @@
       padding: 40px;
       font-family: Arial, sans-serif;
     }
-    img {
+    .container {
+      position: relative;
+      display: inline-block;
+    }
+    .invitation-img {
       max-width: 90%;
       height: auto;
       border-radius: 12px;
       box-shadow: 0 6px 15px rgba(0,0,0,0.2);
     }
-    a.location-link {
-      display: inline-block;
-      margin-top: 15px;
+    .overlay {
+      position: absolute;
+      bottom: 40px; /* adjust this to move up/down */
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(255,255,255,0.8);
+      padding: 8px 12px;
+      border-radius: 8px;
+    }
+    .overlay a {
       font-size: 18px;
       color: red;
-      text-decoration: none;
       font-weight: bold;
+      text-decoration: none;
     }
-    a.location-link:hover {
+    .overlay a:hover {
       text-decoration: underline;
     }
   </style>
@@ -32,17 +43,15 @@
 <body>
   <h1>✨ Naming Ceremony Invitation ✨</h1>
 
-  <!-- Correct path to your JPEG -->
-  <img src="Invitation1_by_InvitationBazaar.jpeg" alt="Invitation">
+  <div class="container">
+    <!-- Your uploaded image -->
+    <img src="Invitation1_by_InvitationBazaar.jpeg" alt="Invitation" class="invitation-img">
 
-  <!-- Location link -->
-  <p>
-    📍 <a href="https://maps.app.goo.gl/YOUR_GOOGLE_MAPS_LINK"
-          target="_blank"
-          class="location-link">
-      Click here for Location
-    </a>
-  </p>
+    <!-- Overlayed location link -->
+    <div class="overlay">
+      📍 <a href="https://maps.app.goo.gl/YOUR_GOOGLE_MAPS_LINK" target="_blank">Click here for Location</a>
+    </div>
+  </div>
 
 </body>
 </html>
